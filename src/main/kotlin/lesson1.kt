@@ -1,12 +1,14 @@
 import kotlin.math.pow
 
 fun main() {
+    //task #1
     val name = "Филипп"
     val secondName = "Громов"
     val profession = "Наладчик технологического оборудования"
 
     println("$name $secondName $profession\n")
 
+    //task #2
     var byteVar:Byte = 10
     var shortVar:Short = 31000
     var intVar:Int = 2.0.pow(30.0).toInt()
@@ -44,6 +46,7 @@ fun main() {
             "ULong: $uLongVar"
     )
 
+    //task #3
     print("\nWrite something: ")
     val readString:String = readln()
 
