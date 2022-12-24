@@ -5,7 +5,7 @@ fun main() {
     val secondName = "Громов"
     val profession = "Наладчик технологического оборудования"
 
-    println("$name $secondName $profession")
+    println("$name $secondName $profession\n")
 
     var byteVar:Byte = 10
     var shortVar:Short = 31000
@@ -44,7 +44,23 @@ fun main() {
             "ULong: $uLongVar"
     )
 
-    print("Write something: ")
+    print("\nWrite something: ")
     val readString:String = readln()
-    println(readString.isEmpty())
+
+    println("isEmpty: ${readString.isEmpty()}\n" +
+            "charAt(2): ${readString[2]}\n" +
+            "equals(\"another string\"): ${readString == "another string"}\n" +
+            "equalsIgnoreCase(\"another string\"): ${readString.equals("another string", ignoreCase = true)}\n" +
+            "startsWith(\"another\"): ${readString.startsWith("another")}\n" +
+            "startsWith(\"string\", 8): ${readString.startsWith("string", 8)}\n" +
+            "endsWith(\"ing\"): ${readString.endsWith("ing")}\n" +
+            "contains(\"r s\"): ${readString.contains("r s")}\n" +
+            "concat(\" added something new\"): ${readString.plus(" added something new")}\n" +
+            "replace(\"string\", \"new string\"): ${readString.replace("string", "new string")}\n" +
+            "toLowerCase: ${readString.lowercase()}"
+    )
+
+    val buildMyString = StringBuilder("Моё имя ")
+    buildMyString.append(name)
+    println(buildMyString)
 }
