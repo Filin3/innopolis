@@ -5,6 +5,7 @@ fun main() {
     task1()
     task2()
     task3()
+    task4()
 }
 
 fun task1() {
@@ -62,6 +63,41 @@ fun task3() {
         println("Congrats! You’ve passed the test!")
     } else {
         println("Sorry, you’ve failed the test")
+    }
+}
+
+fun task4() {
+    val channelArray = arrayOf<String>(
+        "TVNZ",
+        "Maori Television",
+        "TVNZ Duke",
+        "Bravo Plus 1",
+        "Rush",
+        "Al Jazeera",
+        "Shine TV",
+        "Te Reo",
+        "Parliament TV",
+        "Discovery",
+        "National Geographic",
+        "Adult Swim"
+    )
+
+    while (true) {
+        val number:Int
+        print("Enter channel number: ")
+
+        try {
+            number = readln().toInt()
+            if (number == 0) break
+
+            if (number >= 1 && number <= channelArray.size) {
+                println("Channel number $number - ${channelArray[number-1]}")
+            } else {
+                println("Channel not found. Available channels 1 - ${channelArray.size}")
+            }
+        } catch (e: NumberFormatException) {
+            println("Only an integer is available for input")
+        }
     }
 }
 
